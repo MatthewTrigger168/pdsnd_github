@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+This project and README were created on May 21, 2019.
 
 ### Project Title
-Replace the Project Title
+U.S. BikeShare Data
 
 ### Description
-Describe what your project is about and what it does
+This is an interactive tool that allows users to analyze BikeShare data.
 
 ### Files used
-Include the files used
+Three csv files for the cities of Chicago, New York City, Washington
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+No outside sources were used.
