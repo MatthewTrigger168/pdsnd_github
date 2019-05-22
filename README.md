@@ -11,4 +11,4 @@ This is an interactive tool that allows users to analyze BikeShare data.
 Three csv files for the cities of Chicago, New York City, Washington
 
 ### Credits
-No outside sources were used.
+Course material from Udacity was referenced and various python functions from stackoverflow.com.
