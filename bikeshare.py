@@ -2,11 +2,11 @@
 import time as t
 import numpy as np
 import pandas as pd
- 
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'nyc': 'new_york_city.csv',
               'washington': 'washington.csv' }
- 
+
 def get_filters(city, month, day):
     """ Asks user to specify a city, month, and day.
    Returns:
@@ -21,16 +21,16 @@ def get_filters(city, month, day):
         print ("Which city should we look at?\n")
         city = input("Chicago, NYC or Washington?\n").lower()
         if city not in ("chicago", "nyc", "washington"):
-            print("\n Nice try... That's an Invalid answer! :(\n") 
+            print("\n Nice try... That's an Invalid answer! :(\n")
             continue
         else:
             break
-        
+
     print("\nHow should we filter your data?\n")
-    
+
     #Get user input for month (all, january, february, ... , june)
     data_filter = input("Month, day or both?\n").lower()
-    
+
     while True:
         if data_filter not in ("month", "day", "both", "none"):
             print("\n Nice try... That's an Invalid answer!\n")
@@ -66,7 +66,7 @@ def get_filters(city, month, day):
                     month = input("January, february, march, april, may, june or all?\n").lower()
                 else:
                     break
-                    
+
             print("Which day should we explore?\n")
             day = input("Monday, tuesday, wednesday, thursday, friday, saturday, sunday or all?\n").lower()
             while True:
@@ -74,11 +74,11 @@ def get_filters(city, month, day):
                     print("\nNice try... That's an Invalid answer!\n")
                     day = input("Monday, tuesday, wednesday, thursday, friday, saturday, sunday or all?\n").lower()
                 else:
-                    break 
-            break    
-            
+                    break
+            break
+
     print('Thank you for your patience :)')
-    
+
     print("You Chose  ", city)
     print("You Chose  ", month)
     print("You Chose  ", day)
@@ -206,7 +206,7 @@ def user_stats(df):
         print('Counts of gender:', gender)
         print('')
     else:
-        print("Sorry Charlie, no gender information is available for this city!")
+        print("Sorry, if you would like to see gender data please filter by Chicago or New York City.")
 
     #Display earliest, most recent, and most common year of birth
     if 'Birth_Year' in df:
@@ -222,7 +222,7 @@ def user_stats(df):
         print('Most Popular Birth Year:', common_birth_year)
         print('')
     else:
-        print("Sorry Charlie, no birth year information is available for this city.")
+        print("Sorry, if you would like to see gender data please filter by Chicago or New York City.")
 
 def data(df):
     """ Shows the user 5 rows of raw data."""
