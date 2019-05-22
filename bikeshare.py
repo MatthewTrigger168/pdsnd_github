@@ -130,21 +130,21 @@ def time_stats(df):
 
     print('Most Common Month:', common_month)
     print('')
-
+    print('-'*50)
     #display the most common day of week
     df['week'] = df['Start Time'].dt.week
     common_week = df['week'].mode()[0]
 
     print('Most Common day of week:', common_week)
     print('')
-
+    print('-'*50)
     #display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     common_hour = df['hour'].mode()[0]
 
     print('Most Common Start Hour:', common_hour)
     print('')
-
+    print('-'*50)
 def station_stats(df):
     """Displays statistics on the most used stations and common trips."""
 
@@ -157,20 +157,20 @@ def station_stats(df):
 
     print('Favorite Start Station:', common_start_station)
     print('')
-
+    print('-'*50)
     #display most commonly used end station
     common_end_station = df['End Station'].mode()[0]
 
     print('Favorite End Station:', common_end_station)
     print('')
-
+    print('-'*50)
     #display most frequent combination of start station and end station trip
     df['combo'] = df['Start Station'] + ' to ' + df['End Station']
     common_station_combo = df['combo'].mode()[0]
 
     print('Most Common Combination:', common_station_combo)
     print('')
-
+    print('-'*50)
 def trip_duration_stats(df):
     """Displays statistics for total and average trip duration."""
 
@@ -182,13 +182,13 @@ def trip_duration_stats(df):
 
     print('Total Travel Time:', total_travel_time)
     print('')
-
+    print('-'*50)
     #display mean travel time
     average = df['Trip Duration'].mean()
 
     print('Mean/Average Travel Time:', average)
     print('')
-
+    print('-'*50)
 def user_stats(df):
     """Displays statistics on those who use bikeshare."""
 
@@ -199,7 +199,7 @@ def user_stats(df):
     user_types = df['User Type'].value_counts()
     print('Counts of user types:', user_types)
     print('')
-
+    print('-'*50)
     #Display counts of gender
     if 'Gender' in df:
         gender = df['Gender'].value_counts()
