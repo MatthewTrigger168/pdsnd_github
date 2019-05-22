@@ -16,7 +16,7 @@ def get_filters(city, month, day):
     print ('Howdy! How about we explore some major US bikeshare data!')
     print ('')
     #Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
+    t.sleep(1)
     while True:
         print ("Which city should we look at?\n")
         city = input("Chicago, NYC or Washington?\n").lower()
@@ -127,21 +127,21 @@ def time_stats(df):
     #display the most common month
     df['month'] = df['Start Time'].dt.month
     common_month = df['month'].mode()[0]
-
+    t.sleep(1)
     print('Most Common Month:', common_month)
     print('')
     print('-'*50)
     #display the most common day of week
     df['week'] = df['Start Time'].dt.week
     common_week = df['week'].mode()[0]
-
+    t.sleep(1)
     print('Most Common day of week:', common_week)
     print('')
     print('-'*50)
     #display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     common_hour = df['hour'].mode()[0]
-
+    t.sleep(1)
     print('Most Common Start Hour:', common_hour)
     print('')
     print('-'*50)
@@ -154,20 +154,20 @@ def station_stats(df):
 
     #display most commonly used start station
     common_start_station = df['Start Station'].mode()[0]
-
+    t.sleep(1)
     print('Favorite Start Station:', common_start_station)
     print('')
     print('-'*50)
     #display most commonly used end station
     common_end_station = df['End Station'].mode()[0]
-
+    t.sleep(1)
     print('Favorite End Station:', common_end_station)
     print('')
     print('-'*50)
     #display most frequent combination of start station and end station trip
     df['combo'] = df['Start Station'] + ' to ' + df['End Station']
     common_station_combo = df['combo'].mode()[0]
-
+    t.sleep(1)
     print('Most Common Combination:', common_station_combo)
     print('')
     print('-'*50)
@@ -179,13 +179,13 @@ def trip_duration_stats(df):
 
     #display total travel time
     total_travel_time = df['Trip Duration'].sum()
-
+    t.sleep(1)
     print('Total Travel Time:', total_travel_time)
     print('')
     print('-'*50)
     #display mean travel time
     average = df['Trip Duration'].mean()
-
+    t.sleep(1)
     print('Mean/Average Travel Time:', average)
     print('')
     print('-'*50)
